@@ -36,7 +36,7 @@ cgpa_cal
 
 ▶ How to Run
 1. Clone the repository
-git clone https://github.com/YourUserName/GPA-CGPA-Calculator.git
+git clone https://github.com/Priyanshumkjee/CodeAlpha_CGPA-Calculator
 cd GPA-CGPA-Calculator
 
 2. Compile the program

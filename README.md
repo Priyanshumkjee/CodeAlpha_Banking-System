@@ -1,76 +1,107 @@
 # CodeAlpha_Banking-System
-📊 GPA & CGPA Calculator (C++)
+🏦 Bank Management System (C++)
 
-This is a simple console-based GPA & CGPA Calculator built using C++.
-It helps students calculate their GPA (Grade Point Average) and CGPA (Cumulative Grade Point Average) based on subject credits, grade points, and semester performance.
+A fully functional console-based Bank Record Management System built using C++.
+This project provides account creation, record modification, deposits, withdrawals, balance inquiry and complete management of bank user data using file handling.
 
-🚀 Features
+This program stores account details in binary format ensuring data persistence even after program closure.
+Source reference from code: account handling, creation, modification, deposit/withdraw, and file management 
 
-✔ Calculate GPA using subject credits × grade points
-✔ Calculate CGPA using multiple semester GPAs
-✔ See the formula/method used for both calculations
-✔ Easy navigation with menu-based interaction
-✔ Lightweight, fast & terminal-based program
+Bank_Management
 
-📌 Menu Options
-Option	Description
-1	Calculate GPA for subjects
-2	Calculate CGPA for multiple semesters
-3	View calculation methodology
-4	Exit the application
-🧮 Formula Used
-GPA  =  Σ (Credit × Grade Point) / Σ Credits  
-CGPA =  Σ GPA of All Semesters / Number of Semesters
+✨ Features
+Feature	Description
+🆕 Create New Bank Account	Add user details including name, account type and initial balance
+✏ Modify Existing Account	Update account holder details, type and stored balance
+💰 Deposit Amount	Add balance to an existing account
+💸 Withdraw Money	Safe withdrawal with minimum balance check
+🔍 Account Balance Inquiry	View full details of a specific account
+📋 All Account Listing	Display a table of all stored bank accounts
+❌ Delete Account	Remove an account record permanently
+💾 Persistent Storage	Data is stored in account.dat file using binary I/O
+📂 Project Structure
+📁 Bank-Management-System
+│── Bank_Management.cpp   # Main Source Code
+│── account.dat           # Auto-generated binary storage file
+│── README.md             # Documentation
+
+🧠 How It Works
+
+The project uses Object-Oriented Programming + File Handling in C++.
+
+🔸 Class Bank includes:
+Function	Purpose
+Get_Data()	Create new account
+Write_Data()	Save account to file
+Display_Invidual_Records()	Show a specific account
+report()	Display user list format
+dep() / draw()	Add or deduct amount
+Modification_data()	Modify account info
+retacno() / rettype() / retdeposit()	Data access methods
+🔸 Other Key Functions:
+Get_All_Data();          // Show all accounts
+Deposit_Withdraw();      // Deposit or withdraw balance
+Account_Modification();  // Update stored data
+Delete_Account();        // Remove account file entry
 
 
-These formulas are also displayed inside the program menu 
+All operations use binary read/write through fstream, enabling persistent storage even after exit 
 
-cgpa_cal
+Bank_Management
 
 .
 
-📂 File Structure
-📁 GPA-CGPA-Calculator
-│── cgpa_cal.cpp   # Main Source Code
-│── README.md      # Documentation
-
-▶ How to Run
+▶ Running the Program
 1. Clone the repository
-git clone https://github.com/Priyanshumkjee/CodeAlpha_CGPA-Calculator
-cd GPA-CGPA-Calculator
+git clone https://github.com/Priyanshumkjee/ CodeAlpha_Banking-System
+cd Bank-Management-System
 
-2. Compile the program
-g++ cgpa_cal.cpp -o calculator
+2. Compile
+g++ Bank_Management.cpp -o bank_system
 
-3. Run the executable
-./calculator
+3. Run
+./bank_system
 
-📷 Program Output Preview
---------------------------------------------------------------------------  
-                  GPA & CGPA Calculator (Developed by Ohid)               
---------------------------------------------------------------------------  
-Menu:
-1. Calculate GPA
-2. Calculate CGPA
-3. Method used
-4. Exit
---------------------------------------------------------------------------  
-Enter your choice:
+🖥 Menu Preview
+===========================
+   BANKING RECORD SYSTEM
+===========================
 
-🛠 Tech Stack
-Technology	Usage
-C++	Core logic & program structure
-iostream	Input/Output operations
-stdlib	System & exit handling
-👨‍💻 Author
+01. CREATE NEW ACCOUNT
+02. MODIFY AN ACCOUNT
+03. BALANCE ENQUIRY
+04. DEPOSIT
+05. WITHDRAW
+06. ALL ACCOUNT HOLDER LIST
+07. CLOSE AN ACCOUNT
+08. EXIT
 
-Developed by: Ohid
-If you'd like, I can also help you format a GitHub profile section or badges!
+🔐 Constraints Implemented
 
-⭐ Contribute & Support
+✔ Minimum Balance
+
+Saving: ₹500
+
+Current: ₹1000
+
+✔ Max Deposit Allowed: ₹10,00,000
+✔ Account Number strictly 12 digits
+
+All validations present in code logic 
+
+Bank_Management
+
+.
+
+👨‍💻 Developer
+
+Created By: Abhisht Chouhan
+Written fully in C++ with file-based record storage.
+
+⭐ Support the Project
 
 If you like this project:
 
-🌟 Star the repo
-🔱 Fork and improve it
-🐛 Submit issues or suggestions
+💠 Star the repository
+🔄 Fork & improve it
+🐛 Submit issues & suggestions
